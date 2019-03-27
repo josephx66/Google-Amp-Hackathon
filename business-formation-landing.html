@@ -6,11 +6,8 @@
 
 	<title>Business Formation - Choose a Business Structure: LLC, Corporation, DBA</title>
 
-	<meta name="REVISIT-AFTER" content="1 DAYS">
 	<meta name="RATING" content="GENERAL">
 	<meta name="RESOURCE-TYPE" content="DOCUMENT">
-	<meta name="robots" content="noindex, nofollow">
-	<meta name="robots" content="noodp, noydir">
 
 	<meta name="theme-color" content="#247bd4">
 	<meta name="msapplication-navbutton-color" content="#247bd4">
@@ -37,6 +34,12 @@
 	<link rel="canonical" href="https://www.legalzoom.com/sem/biz/business-formation.html">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
 	<style amp-custom>
+		*,
+		::before,
+		::after {
+			box-sizing: border-box;
+		}
+
 		html,
 		body {
 			margin: 0;
@@ -52,6 +55,7 @@
 			min-height: 100%;
 			background-color: #fff;
 			font-family: "OpenSans Regular", sans-serif;
+			line-height: 24px;
 			font-size: 16px;
 			color: #444;
 		}
@@ -61,35 +65,42 @@
 		}
 
 		#wrapper > main {
-			padding: 1em 2em;
+			padding: 1em 25px;
 		}
 
 		#wrapper > footer {
 			padding: 1em 2em;
+			line-height: 20px;
 			font-size: 12px;
 		}
 
-		*,
-		::before,
-		::after {
-			box-sizing: border-box;
+		#wrapper > footer a {
+			text-decoration: none;
 		}
 
 		h1 {
-			font-weight: normal;
-			font-size: 28px;
+			font-family: "OpenSans Regular", sans-serif;
+			font-weight: bold;
+			line-height: 54px;
+			font-size: 48px;
+			color: #131d26;
 		}
 
 		h2 {
-			font-weight: normal;
-			font-size: 24px;
-			color: #133ba3;
+			font-family: "OpenSans Regular", sans-serif;
+			font-weight: bold;
+			line-height: 40px;
+			font-size: 32px;
+			color: #131d26;
 		}
 
 		h3 {
-			font-weight: normal;
-			font-size: 16px;
-			color: #133ba3;
+			font-family: "OpenSans Regular", sans-serif;
+			margin: 0;
+			font-weight: bold;
+			line-height: 30px;
+			font-size: 18px;
+			color: #131d26;
 		}
 
 		.cf:after {
@@ -98,26 +109,36 @@
 			clear: both;
 		}
 
-		button {
+		.desktop {
+			display: none;
+		}
+
+		button.text {
+			margin-bottom: 40px;
 			border: none;
-			padding: 0 1.5em;
-			background-color: #339eff;
+			padding: 0;
+			background: transparent none;
 			line-height: 48px;
-			text-align: center;
+			font-weight: bold;
+			font-size: 16px;
+			color: #06f;
+		}
+
+		button.large {
+			border: none;
+			padding: 0 2em;
+			background-color: #06f;
+			line-height: 72px;
+			font-weight: bold;
 			font-size: 16px;
 			color: #fff;
 			border-radius: 50px;
 		}
 
-		button.large {
-			padding: 0 2.5em;
-			line-height: 72px;
-		}
-
 		.logo {
-			position: absolute;
-			left: 0;
-			top: 0;
+			display: inline-block;
+			margin: 20px;
+			width: 100px;
 		}
 
 		.logo amp-img {
@@ -138,7 +159,12 @@
 		}
 
 		#call div {
-			padding-top: 10px;
+			margin-top: 20px;
+			border: 2px solid #06f;
+			padding: 0 1em;
+			font-weight: bold;
+			color: #06f;
+			border-radius: 2em;
 		}
 
 		#call p {
@@ -151,34 +177,70 @@
 
 		.bizcat-hero {
 			position: relative;
-			color: #fefefe;
+			color: #656f7a;
 		}
 
-		.hero {
-			display: block;
-			min-height: 200px;
-			background-color: #424146;
-			text-align: right;
+		.bizcat-hero .hero {
 		}
 
 		.bizcat-hero .msg {
+			padding: 0 25px 25px;
+		}
+
+		.bizcat-hero .alt {
+			padding: 0 25px 25px;
+		}
+
+		.bizcat-options {
+			margin-bottom: 60px;
+		}
+
+		.bizcat-options .item {
+			margin-bottom: 24px;
+			background-color: #f0f3f8;
+		}
+
+		.bizcat-options .item p {
+			margin-top: 0;
+		}
+
+		.bizcat-options .content {
+			padding: 0 20px;
+		}
+
+		.formation {
+			margin: 48px 0;
+			color: #656f7a;
+		}
+
+		.icon {
+			position: relative;
+		}
+
+		.icon h3 {
 			position: absolute;
 			left: 20px;
-			right: 20px;
-			top: 20px;
-			max-width: 735px;
+			bottom: 5px;
+			margin: 0;
+			line-height: 52px;
+			font-size: 40px;
 		}
 
-		.icon-llc {
-			margin: 80px 0 45px;
+		.diamond-plate {
+			margin-bottom: 24px;
+			background: transparent url('media/diamond-plate.png') repeat center / 44px 28px;
 		}
 
-		.icon-inc {
-			margin: 0 0 45px;
+		.diamond-plate h2 {
+			display: inline-block;
+			margin: 50px 0 0;
+			padding: 30px;
+			width: 60%;
+			background-color: #fff;
 		}
 
-		.icon-dba {
-			margin: 110px 0 45px;
+		.accordion {
+			margin-bottom: 60px;
 		}
 
 		.accordion section {
@@ -195,6 +257,7 @@
 			min-height: 3em;
 			outline: none;
 			background-color: transparent;
+			line-height: 20px;
 			font-weight: 700;
 			font-size: 14px;
 			color: #444;
@@ -241,7 +304,23 @@
 			margin-top: 0;
 		}
 
+		.started amp-img {
+			margin: 48px 0 60px;
+		}
+
 		@media screen and (min-width: 760px) {
+			.mobile {
+				display: none;
+			}
+
+			.desktop {
+				display: block;
+			}
+
+			.logo {
+				width: 134px;
+			}
+
 			#call div {
 				display: none;
 			}
@@ -250,6 +329,18 @@
 			#call:focus-within p {
 				position: relative;
 				display: block;
+			}
+
+			.bizcat-hero {
+				display: flex;
+			}
+
+			.bizcat-hero .msg {
+				padding: 0 60px;
+			}
+
+			.bizcat-hero > div {
+				width: 50%;
 			}
 
 			footer .disclaimer {
@@ -302,7 +393,7 @@
 				"name": "LegalZoom, Inc.",
 				"logo": {
 					"@type": "ImageObject",
-					"url": "/media/legalzoom.png",
+					"url": "media/legalzoom.png",
 					"width": 600,
 					"height": 60
 				}
@@ -310,124 +401,7 @@
 			"description": "Start a business with LegalZoom. Choose a business structure and form an LLC, corporation, or file a DBA quickly and easily."
 		}
 	</script>
-	<style amp-boilerplate>
-		body {
-			-webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-			-moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-			-ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-			animation: -amp-start 8s steps(1, end) 0s 1 normal both
-		}
-
-		@-webkit-keyframes -amp-start {
-			from {
-				visibility: hidden
-			}
-			to {
-				visibility: visible
-			}
-		}
-
-		@-moz-keyframes -amp-start {
-			from {
-				visibility: hidden
-			}
-			to {
-				visibility: visible
-			}
-		}
-
-		@-ms-keyframes -amp-start {
-			from {
-				visibility: hidden
-			}
-			to {
-				visibility: visible
-			}
-		}
-
-		@-o-keyframes -amp-start {
-			from {
-				visibility: hidden
-			}
-			to {
-				visibility: visible
-			}
-		}
-
-		@keyframes -amp-start {
-			from {
-				visibility: hidden
-			}
-			to {
-				visibility: visible
-			}
-		}
-
-		@-webkit-keyframes expand {
-			from {
-				max-height: 0;
-				opacity: 0;
-			}
-			to {
-				max-height: 50em;
-				opacity: 1;
-			}
-		}
-
-		@-moz-keyframes expand {
-			from {
-				max-height: 0;
-				opacity: 0;
-			}
-			to {
-				max-height: 50em;
-				opacity: 1;
-			}
-		}
-
-		@-ms-keyframes expand {
-			from {
-				max-height: 0;
-				opacity: 0;
-			}
-			to {
-				max-height: 50em;
-				opacity: 1;
-			}
-		}
-
-		@-o-keyframes expand {
-			from {
-				max-height: 0;
-				opacity: 0;
-			}
-			to {
-				max-height: 50em;
-				opacity: 1;
-			}
-		}
-
-		@keyframes expand {
-			from {
-				max-height: 0;
-				opacity: 0;
-			}
-			to {
-				max-height: 50em;
-				opacity: 1;
-			}
-		}
-	</style>
-	<noscript>
-		<style amp-boilerplate>
-			body {
-				-webkit-animation: none;
-				-moz-animation: none;
-				-ms-animation: none;
-				animation: none
-			}
-		</style>
-	</noscript>
+	<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 	<script async src="https://cdn.ampproject.org/v0.js"></script>
 	<script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
 	<script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
@@ -437,35 +411,32 @@
 
 	<header class="cf">
 		<a href="//www.legalzoom.com/" class="logo">
-			<amp-img src="img/legalzoom.png" width="600" height="60" alt="LegalZoom"></amp-img>
+			<amp-img src="media/legalzoom-inc.png" width="102" height="30" layout="responsive" alt="LegalZoom"></amp-img>
 		</a>
 
 		<a id="call" href="tel:+18777873410">
-			<div><amp-img src="img/phone-icon.jpg" width="40" height="40" alt="Call Us"></amp-img></div>
+			<div class="button">Call Us</div>
 			<p><span>Have questions?</span> <span>Give us a call at <strong>(877) 787-3410</strong></span></p>
 		</a>
 	</header>
 
-	<aside class="bizcat-hero cf">
-		<div class="hero">
-			<!--<amp-img srcset="img/hero-biz-cat.jpg-1x1 400w, img/hero-biz-cat-4x3.jpg 700w, img/hero-biz-cat-16x9.jpg 1067w, img/hero-biz-cat.jpg 1440w" heights="(max-width:400px) 100%, (max-width:700px) 75%, (max-width:1000px) 56.25%, 41.67%" width="1440" height="600" layout="responsive" alt=""></amp-img>-->
+	<aside class="bizcat-hero">
+		<div class="msg">
+			<h1>Form your business without the guesswork</h1>
+
+			<p class="desktop">Let us do the legwork when forming your business. Never touch a legal form - take the self-guided questionnaire and we will help get you set up for real success.</p>
+
+			<button class="large">See our top products</button>
 		</div>
 
-		<div class="msg">
-			<h1>
-				<amp-fit-text width="735" height="160" layout="responsive" min-font-size="18" max-font-size="32">
-					Form your business without the guesswork
-				</amp-fit-text>
-			</h1>
-
-			<p>Let us do the legwork when forming your business. Never touch a legal form - take the self-guided questionnaire and we will help get you set up for real success.</p>
-
-			<button class="large">SEE OUR TOP PRODUCTS</button>
+		<div class="hero">
+			<amp-img srcset="media/asset-1-4-x.png 720w, media/asset-1-4-2x.png 1440w, media/asset-1-4-3x.png 2160w, img/hero-biz-cat.jpg 1440w" width="720" height="480" layout="responsive" alt=""></amp-img>
 		</div>
 	</aside>
 
+
 	<main>
-		<section>
+		<section class="formation">
 			<h2>Taking care of business formations</h2>
 
 			<p>We're working overtime to help over 2 million people start and run their businesses — give your business its backbone today.</p>
@@ -473,47 +444,64 @@
 
 
 		<section class="bizcat-options">
-			<div>
-				<div class="icon-llc">
-					<!--<amp-img src="img/bizcat-llc-icon.jpg" width="181" height="121" alt="LLC"></amp-img>-->
+			<div class="item">
+				<div>
+					<div class="icon icon-llc">
+						<amp-img src="media/llc-x.png" width="790" height="496" layout="responsive" alt="LLC"></amp-img>
+						<h3>LLC</h3>
+					</div>
+
+					<div class="content">
+						<h3>Limited Liability Company</h3>
+
+						<p>Personal asset protection? Check. Business and tax flexibility? Check. This is a popular choice for many new businesses.</p>
+
+						<button class="text">Start my LLC &rsaquo;</button>
+					</div>
 				</div>
-
-				<h3>Limited Liability Company (LLC)</h3>
-
-				<p>Personal asset protection? Check. Business and tax flexibility? Check. This is a popular choice for many new businesses.</p>
-
-				<button>START MY LLC</button>
 			</div>
 
 
-			<div>
-				<div class="icon-inc">
-					<!--<amp-img src="img/bizcat-inc-icon.jpg" width="197" height="200" alt="INC"></amp-img>-->
+			<div class="item">
+				<div>
+					<div class="icon icon-inc">
+						<amp-img src="media/inc-x.png" width="395" height="227" layout="responsive" alt="INC"></amp-img>
+						<h3>INC</h3>
+					</div>
+
+					<div class="content">
+						<h3>Corporation</h3>
+
+						<p>Thinking of raising capital? Hoping to go public? Expect a lot of shareholders? Then this could be a viable option to explore.</p>
+
+						<button class="text">Start my corporation &rsaquo;</button>
+					</div>
 				</div>
-
-				<h3>Corporation (Inc)</h3>
-
-				<p>Thinking of raising capital? Hoping to go public? Expect a lot of shareholders? Then this could be a viable option to explore.</p>
-
-				<button>START MY CORPORATION</button>
 			</div>
 
 
-			<div>
-				<div class="icon-dba">
-					<!--<amp-img src="img/bizcat-dba-icon.jpg" width="146" height="87" alt="DBA"></amp-img>-->
+			<div class="item">
+				<div>
+					<div class="icon icon-dba">
+						<amp-img src="media/dba-x.png" width="366" height="234" layout="responsive" alt="DBA"></amp-img>
+						<h3>DBA</h3>
+					</div>
+
+					<div class="content">
+						<h3>Doing Business As</h3>
+
+						<p>A necessary option for bringing your business name to life if it operates under a name other than its legal name.</p>
+
+						<button class="text">Start my DBA &rsaquo;</button>
+					</div>
 				</div>
-
-				<h3>Doing Business As (DBA)</h3>
-
-				<p>A necessary option for bringing your business name to life if it operates under a name other than its legal name.</p>
-
-				<button>START MY DBA</button>
 			</div>
 		</section>
 
 		<section>
-			<h2>Got more questions?</h2>
+			<div class="diamond-plate">
+				<h2>Common questions</h2>
+			</div>
 
 			<amp-accordion class="accordion" disable-session-states animate>
 				<section>
@@ -578,16 +566,18 @@
 
 		</section>
 
-		<section>
+		<section class="started">
 			<h2>We're in the business of helping you start your business</h2>
 
-			<button class="large">START MY BUSINESS</button>
+			<button class="large">Get started</button>
+
+			<amp-img src="media/group-1-x.png" width="451" height="624" layout="responsive" alt=""></amp-img>
 		</section>
 
 	</main>
 
 	<footer>
-		<p>&copy; LegalZoom.com, Inc. All rights reserved.</p>
+		<p><strong>&copy; LegalZoom.com, Inc. All rights reserved.</strong></p>
 
 		<div class="disclaimer">
 			<p>Disclaimer: Communications between you and LegalZoom are protected by our
@@ -597,8 +587,8 @@
 			</p>
 
 			<div>
-				<amp-img src="/media/bbb-icon.jpg" width="150" height="100" alt="Better Business Bureau Accredited"></amp-img>
-				<amp-img src="/media/norton-icon.jpg" width="150" height="100" alt="Norton Secured SSL Certificate"></amp-img>
+				<amp-img src="media/bbb-icon.jpg" width="150" height="100" alt="Better Business Bureau Accredited"></amp-img>
+				<amp-img src="media/norton-icon.jpg" width="150" height="100" alt="Norton Secured SSL Certificate"></amp-img>
 			</div>
 		</div>
 
