@@ -60,6 +60,11 @@
 			color: #444;
 		}
 
+		#wrapper {
+			margin: 0 auto;
+			max-width: 1280px;
+		}
+
 		#wrapper > header {
 			height: 60px;
 		}
@@ -69,7 +74,7 @@
 		}
 
 		#wrapper > footer {
-			padding: 1em 2em;
+			padding: 1em 20px 60px;
 			line-height: 20px;
 			font-size: 12px;
 		}
@@ -177,13 +182,19 @@
 
 		.bizcat-hero {
 			position: relative;
+			overflow: hidden;
 			color: #656f7a;
 		}
 
 		.bizcat-hero .hero {
+			align-items: center;
+			margin: 0 auto;
+			max-width: 650px;
 		}
 
 		.bizcat-hero .msg {
+			display: flex;
+			align-items: center;
 			padding: 0 25px 25px;
 		}
 
@@ -192,7 +203,7 @@
 		}
 
 		.bizcat-options {
-			margin-bottom: 60px;
+			margin-bottom: 80px;
 		}
 
 		.bizcat-options .item {
@@ -304,8 +315,13 @@
 			margin-top: 0;
 		}
 
+		.started {
+			margin: 48px auto 80px 0;
+			max-width: 960px;
+		}
+
 		.started amp-img {
-			margin: 48px 0 60px;
+			max-width: 400px;
 		}
 
 		@media screen and (min-width: 760px) {
@@ -331,8 +347,86 @@
 				display: block;
 			}
 
+			.formation {
+				padding-left: 40px;
+				max-width: 410px;
+			}
+
+			.bizcat-options .item > div {
+				display: flex;
+				flex-direction: row;
+			}
+
+			.bizcat-options .item > div > div {
+				flex: 1;
+			}
+
+			.bizcat-options .item > div > div + div {
+				padding: 20px 20px 0 30px;
+			}
+
+			.started {
+				display: flex;
+				flex-direction: row-reverse;
+			}
+
+			.started > div {
+				padding: 0 30px;
+			}
+
+			.started > div:first-child {
+				display: flex;
+				flex: 2;
+				align-items: center;
+			}
+
+			.started div + div {
+				flex: 1;
+			}
+
+			.started amp-img {
+				margin: 0;
+				max-width: none;
+			}
+
+			.diamond-accordion {
+				margin-left: 40px;
+				background: transparent url('media/diamond-plate.png') repeat center / 44px 28px;
+			}
+
+			.diamond-plate {
+				margin-bottom: 0;
+				max-width: 90%;
+				background: transparent none;
+			}
+
+			.diamond-plate h2 {
+				width: 100%;
+			}
+
+			.accordion {
+				margin: 0 auto 0 0;
+				padding: 0 30px 30px 0;
+				max-width: 90%;
+				background-color: #fff;
+			}
+
+			#wrapper > footer {
+				padding: 0 40px 60px;
+			}
+		}
+
+		@media screen and (min-width: 920px) {
 			.bizcat-hero {
 				display: flex;
+				flex-direction: row;
+				font-size: 18px;
+			}
+
+			.bizcat-hero .hero {
+				margin-right: -120px;
+				min-width: 650px;
+				max-width: none;
 			}
 
 			.bizcat-hero .msg {
@@ -342,14 +436,32 @@
 			.bizcat-hero > div {
 				width: 50%;
 			}
+		}
 
-			footer .disclaimer {
+		@media screen and (min-width: 1024px) {
+			.bizcat-hero .hero {
+				margin-right: 0;
+			}
+
+			.bizcat-options {
 				display: flex;
 				flex-direction: row;
 			}
 
-			footer .disclaimer > div {
-				max-width: 200px;
+			.bizcat-options .item {
+				margin: 10px;
+			}
+
+			.bizcat-options .item > div {
+				display: block;
+			}
+
+			.bizcat-options .item > div > div {
+				flex: 1;
+			}
+
+			.bizcat-options .item > div > div + div {
+				padding: 0 20px;
 			}
 		}
 	</style>
@@ -422,15 +534,17 @@
 
 	<aside class="bizcat-hero">
 		<div class="msg">
-			<h1>Form your business without the guesswork</h1>
+			<div>
+				<h1>Form your business without the guesswork</h1>
 
-			<p class="desktop">Let us do the legwork when forming your business. Never touch a legal form - take the self-guided questionnaire and we will help get you set up for real success.</p>
+				<p class="desktop">Let us do the legwork when forming your business. Never touch a legal form - take the self-guided questionnaire and we will help get you set up for real success.</p>
 
-			<button class="large">See our top products</button>
+				<button class="large">See our top products</button>
+			</div>
 		</div>
 
 		<div class="hero">
-			<amp-img srcset="media/asset-1-4-x.png 720w, media/asset-1-4-2x.png 1440w, media/asset-1-4-3x.png 2160w, img/hero-biz-cat.jpg 1440w" width="720" height="480" layout="responsive" alt=""></amp-img>
+			<amp-img srcset="media/asset-1-4-x.jpg 720w, media/asset-1-4-2x.jpg 1440w, media/asset-1-4-3x.jpg 2160w" width="720" height="480" layout="responsive" alt=""></amp-img>
 		</div>
 	</aside>
 
@@ -447,7 +561,7 @@
 			<div class="item">
 				<div>
 					<div class="icon icon-llc">
-						<amp-img src="media/llc-x.png" width="790" height="496" layout="responsive" alt="LLC"></amp-img>
+						<amp-img src="media/llc.jpg" width="395" height="248" layout="responsive" alt="LLC"></amp-img>
 						<h3>LLC</h3>
 					</div>
 
@@ -465,7 +579,7 @@
 			<div class="item">
 				<div>
 					<div class="icon icon-inc">
-						<amp-img src="media/inc-x.png" width="395" height="227" layout="responsive" alt="INC"></amp-img>
+						<amp-img src="media/inc.jpg" width="395" height="248" layout="responsive" alt="INC"></amp-img>
 						<h3>INC</h3>
 					</div>
 
@@ -483,7 +597,7 @@
 			<div class="item">
 				<div>
 					<div class="icon icon-dba">
-						<amp-img src="media/dba-x.png" width="366" height="234" layout="responsive" alt="DBA"></amp-img>
+						<amp-img src="media/dba.jpg" width="395" height="248" layout="responsive" alt="DBA"></amp-img>
 						<h3>DBA</h3>
 					</div>
 
@@ -498,7 +612,7 @@
 			</div>
 		</section>
 
-		<section>
+		<section class="diamond-accordion">
 			<div class="diamond-plate">
 				<h2>Common questions</h2>
 			</div>
@@ -567,11 +681,17 @@
 		</section>
 
 		<section class="started">
-			<h2>We're in the business of helping you start your business</h2>
+			<div>
+				<div>
+					<h2>We're in the business of helping you start your business</h2>
 
-			<button class="large">Get started</button>
+					<button class="large">Get started</button>
+				</div>
+			</div>
 
-			<amp-img src="media/group-1-x.png" width="451" height="624" layout="responsive" alt=""></amp-img>
+			<div>
+				<amp-img src="media/group-15.jpg" width="451" height="624" layout="responsive" alt=""></amp-img>
+			</div>
 		</section>
 
 	</main>
@@ -585,11 +705,6 @@
 				but not by the attorney-client privilege or as work product. LegalZoom provides access to independent attorneys and self-help services at your specific direction. We are not a law firm or a substitute for an attorney or law firm. We cannot provide any kind of advice, explanation, opinion, or recommendation about possible legal rights, remedies, defenses, options, selection of forms or strategies. Your access to the website is subject to our
 				<a href="//www.legalzoom.com/terms-of-use.html" target="_blank" rel="noopener">Terms of Use.</a>
 			</p>
-
-			<div>
-				<amp-img src="media/bbb-icon.jpg" width="150" height="100" alt="Better Business Bureau Accredited"></amp-img>
-				<amp-img src="media/norton-icon.jpg" width="150" height="100" alt="Norton Secured SSL Certificate"></amp-img>
-			</div>
 		</div>
 
 		<p>LegalZoom.com, Legal Forms, Glendale, CA</p>
